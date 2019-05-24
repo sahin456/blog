@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block body  %}
+
+<div class = "jumbotron text-center">
+    <h3>Venüs Bloğuna Hoşgeldiniz</h3>
+    <p>Her türlü aklımıza takılan, aklımıza gelen, yaşadığımız bu Dünya'nın en bilinmiyenleri, bu Dünya'nın en ilginç şeyleri, karanlıkta kalan sırları kısacası bu blogta şaşırtıcı bilgi paylaşımları yapmaya çalışacağız......
+        Asla umutsuzluğa düşmeyin; ama eğer düşerseniz, umutsuzca çalışmaya devam edin.</p>
+
+
+</div>
+
+<P>
+    {% if request.user.is_authenticated %}
+        Giriş Yapılmış , {{ request.user.username }}
+    {% else %}
+        Giriş Yapılmamış...
+    {% endif %}
+
+</P>
+
+
+{% endblock body %}
